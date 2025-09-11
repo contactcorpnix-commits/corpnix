@@ -1,0 +1,36 @@
+// Usage Examples for Testimonials Component with Different Background Colors
+
+// Default usage (uses original colors)
+<Testimonials />
+
+// Custom background colors
+<Testimonials 
+  bgColor="#1a1a2e" 
+  cardBgColor="#16213e" 
+  title="Customer Reviews"
+  subtitle="See what our clients are saying about us"
+/>
+
+// Light theme
+<Testimonials 
+  bgColor="#f8f9fa" 
+  cardBgColor="#ffffff" 
+  title="Client Testimonials"
+  subtitle="Real feedback from satisfied customers"
+/>
+
+// Dark theme with purple accents
+<Testimonials 
+  bgColor="#0f0f23" 
+  cardBgColor="#2d1b69" 
+  title="Success Stories"
+  subtitle="Transformations we've helped create"
+/>
+
+// Corporate blue theme
+<Testimonials 
+  bgColor="#003366" 
+  cardBgColor="#004080" 
+  title="Partner Feedback"
+  subtitle="What our business partners say"
+/>

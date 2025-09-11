@@ -1,0 +1,99 @@
+{
+  "name": "about",
+  "type": "about",
+  "content": {
+    "title": "About Us",
+    "subtitle": "Building Digital Excellence",
+    "description": "We are a team of passionate digital professionals dedicated to helping businesses thrive in the digital landscape. With years of experience and a commitment to innovation, we deliver solutions that drive real results.",
+    "mission": "To empower businesses with cutting-edge digital solutions that drive growth, enhance user experiences, and create lasting value in an ever-evolving digital world.",
+    "vision": "To be the leading digital transformation partner for businesses worldwide, recognized for our innovative solutions, exceptional service, and measurable impact on our clients' success.",
+    "values": [
+      {
+        "title": "Innovation",
+        "description": "We constantly push boundaries and embrace new technologies to deliver cutting-edge solutions.",
+        "icon": "🚀"
+      },
+      {
+        "title": "Excellence",
+        "description": "We strive for perfection in every project, delivering high-quality solutions that exceed expectations.",
+        "icon": "⭐"
+      },
+      {
+        "title": "Collaboration",
+        "description": "We believe in the power of teamwork and work closely with clients to achieve shared goals.",
+        "icon": "🤝"
+      },
+      {
+        "title": "Integrity",
+        "description": "We maintain the highest ethical standards and build trust through transparency and honesty.",
+        "icon": "🔒"
+      },
+      {
+        "title": "Growth",
+        "description": "We foster continuous learning and development for our team and sustainable growth for our clients.",
+        "icon": "📈"
+      },
+      {
+        "title": "Customer Focus",
+        "description": "We put our clients first, understanding their needs and delivering solutions that truly matter.",
+        "icon": "❤️"
+      }
+    ],
+    "stats": [
+      {
+        "value": "150+",
+        "label": "Projects Completed"
+      },
+      {
+        "value": "50+",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "5+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "24/7",
+        "label": "Support Available"
+      }
+    ],
+    "team": [
+      {
+        "name": "Sarah Johnson",
+        "position": "CEO & Founder",
+        "bio": "Digital strategist with 10+ years of experience in building successful online businesses.",
+        "image_url": "/api/placeholder/200/200"
+      },
+      {
+        "name": "Michael Chen",
+        "position": "Technical Director",
+        "bio": "Full-stack developer specializing in scalable web applications and cloud architecture.",
+        "image_url": "/api/placeholder/200/200"
+      },
+      {
+        "name": "Emily Rodriguez",
+        "position": "Creative Director",
+        "bio": "Award-winning designer focused on creating exceptional user experiences and brand identity.",
+        "image_url": "/api/placeholder/200/200"
+      },
+      {
+        "name": "David Kim",
+        "position": "Marketing Lead",
+        "bio": "Growth marketing expert with proven track record in driving customer acquisition.",
+        "image_url": "/api/placeholder/200/200"
+      }
+    ],
+    "images": [
+      {
+        "url": "/api/placeholder/600/400",
+        "alt": "Our team working together"
+      },
+      {
+        "url": "/api/placeholder/600/400",
+        "alt": "Modern office workspace"
+      }
+    ]
+  },
+  "is_active": true,
+  "order": 2
+}

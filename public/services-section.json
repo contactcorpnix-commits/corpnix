@@ -1,0 +1,32 @@
+{
+  "name": "services",
+  "type": "services",
+  "content": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Digital Solutions",
+    "digital_marketing_title": "Digital Marketing",
+    "digital_marketing_description": "Transform your online presence with our comprehensive digital marketing strategies. We help businesses reach their target audience, increase brand awareness, and drive meaningful engagement across all digital channels.",
+    "development_title": "Development",
+    "development_description": "Build powerful, scalable digital solutions with our expert development services. From custom web applications to mobile apps, we create technology that drives your business forward.",
+    "digital_marketing_services": [
+      "Search Engine Optimization (SEO)",
+      "Pay-Per-Click Advertising (PPC)",
+      "Social Media Marketing",
+      "Content Marketing",
+      "Email Marketing",
+      "Analytics & Reporting"
+    ],
+    "development_services": [
+      "Web Development",
+      "Mobile App Development",
+      "E-commerce Solutions",
+      "CMS Development",
+      "API Integration",
+      "UI/UX Design"
+    ],
+    "cta_text": "Get Started Today",
+    "hero_image": "/api/placeholder/600/400"
+  },
+  "is_active": true,
+  "order": 3
+}
