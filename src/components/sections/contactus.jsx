@@ -3,8 +3,9 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import { supabase } from '@/lib/supabase';
 
-const ContactSection = () => {
+const ContactSection = ({section}) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -70,14 +71,59 @@ const ContactSection = () => {
     setSubmitStatus(null);
 
     try {
-      // Simulate form submission without Supabase
-      // In a real implementation, you would send this to your backend
-      console.log('Form submitted:', formData);
-      
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSubmitStatus('success');
+      // Send email via the API route
+      const response = await fetch('/api/send-form', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      // Also save to Supabase as backup
+      try {
+        console.log('Attempting to save to Supabase...');
+        console.log('Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL?.substring(0, 20) + '...');
+        
+        const submissionData = {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          created_at: new Date().toISOString()
+        };
+
+        console.log('Data to insert:', submissionData);
+        
+        const { data, error } = await supabase
+          .from('contact_submissions')
+          .insert([submissionData]);
+
+        if (error) {
+          console.error('Supabase insert failed:', error);
+          console.error('Error code:', error.code);
+          console.error('Error message:', error.message);
+          console.error('Error details:', error.details);
+          console.error('Error hint:', error.hint);
+          
+          // If table doesn't exist, show specific error
+          if (error.code === '42P01') {
+            console.error('Table contact_submissions does not exist');
+          }
+          
+          setSubmitStatus('warning');
+        } else {
+          console.log('Successfully saved to Supabase:', data);
+          setSubmitStatus('success');
+        }
+      } catch (supabaseError) {
+        console.error('Supabase connection error:', supabaseError);
+        setSubmitStatus('warning');
+      }
+
+      // Don't override warning status if already set
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -86,7 +132,6 @@ const ContactSection = () => {
       setIsSubmitting(false);
     }
   };
-
   return (
     <section className="relative py-20 md:py-32 bg-gradient-to-br from-slate-50 via-white to-slate-100">
       <div className="container mx-auto px-4">
@@ -123,24 +168,18 @@ const ContactSection = () => {
           <div className='flex justify-center'>
             <hr className='w-3/4 h-[1px] bg-gray-300 mb-10'/>
           </div>
-          
         <div className="flex justify-center items-center relative text-[#6A61E0]">
             <Image className="relative" src="/Vector_1.png" alt="map" width={120} height={120}/>
             <p className="absolute font-semibold -top-4 text-2xl rounded-full w-9 h-9 flex justify-center items-center bg-white">or</p>
         </div>
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-6">
-          
-          
-
           {/* Map Section */}
           <div className="p-8">
-            
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Find us</h3>
               <div className="w-30 h-1 bg-[#6A61E0] rounded-full"></div>
             </div>
-            
             <div className="relative rounded-lg overflow-hidden h-64 md:h-80">
               <iframe
                 src={map_embed_url}
@@ -168,6 +207,13 @@ const ContactSection = () => {
               <div className="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
                 <p className="font-medium">Thank you for your message!</p>
                 <p className="text-sm">We'll get back to you as soon as possible.</p>
+              </div>
+            )}
+            
+            {submitStatus === 'warning' && (
+              <div className="mb-4 p-4 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded-lg">
+                <p className="font-medium">Message sent via email!</p>
+                <p className="text-sm">Note: There was an issue saving to our database, but your email was sent successfully. We'll still get back to you.</p>
               </div>
             )}
             
