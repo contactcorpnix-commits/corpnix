@@ -125,7 +125,7 @@ const ContactSection = () => {
           </div>
           
         <div className="flex justify-center items-center relative text-[#6A61E0]">
-            <Image className="relative" src="/vector_1.png" alt="map" width={120} height={120}/>
+            <Image className="relative" src="/Vector_1.png" alt="map" width={120} height={120}/>
             <p className="absolute font-semibold -top-4 text-2xl rounded-full w-9 h-9 flex justify-center items-center bg-white">or</p>
         </div>
         {/* Main Content */}

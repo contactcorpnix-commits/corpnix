@@ -142,7 +142,7 @@ export default function AboutPage() {
 
           {/* About hero */}
           <section className="py-24 px-8">
-            <div className='grid grid-cols-2 justify-center gap-8'>
+            <div className='grid lg:grid-cols-2 justify-center gap-8'>
                     <div className=''>
                         <h2 className='text-4xl font-bold py-6'>Who we are?</h2>
                         <p className="py-2">
@@ -179,10 +179,10 @@ export default function AboutPage() {
             <section className='bg-gradient-to-b from-[#221F4D] to-[#0A0822] pb-12 px-8'>
               <div className='text-center '>
                     <h2 className='text-4xl font-bold py-6 text-white'>Lets meet our teams</h2>
-                    <p className='text-white w-3/4 mx-auto'>Meet the talented individuals who make Corpnix possible. Each member brings a unique skill set and a passion for technology. Get to know them and learn more about their journey with Corpnix.</p>
+                    <p className='text-white lg:w-3/4 mx-auto sm:w-full'>Meet the talented individuals who make Corpnix possible. Each member brings a unique skill set and a passion for technology. Get to know them and learn more about their journey with Corpnix.</p>
                   </div>
                   {team && team.length > 0 && (
-                    <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-8">
+                    <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-6 py-8">
                       {team.map((member, index) => (
                     <div key={index} className="flex items-start space-x-3 p-3 w-full bg-[#221F4D] shadow-lg hover:bg-[#35327D]">
                       {member.image_url && (

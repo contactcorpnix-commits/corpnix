@@ -25,7 +25,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-[42px] h-[35px]">
               <Image 
-                src="/logo.png"
+                src="/Logo.png"
                 alt="Corpnix"
                 width={42}
                 height={35}
@@ -67,7 +67,7 @@ export default function Header() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-lg text-foreground hover:bg-muted/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-muted/20"
+              className="p-3 rounded-lg text-white hover:bg-muted/10 transition-all duration-200 focus:outline-none"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
