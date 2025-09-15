@@ -27,7 +27,7 @@ export default function ServicesPage() {
   const ActiveComponent = tabs.find(tab => tab.id === activeTab)?.component;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white py-20">
       
       
       {/* Services Hero Section and Tabs */}

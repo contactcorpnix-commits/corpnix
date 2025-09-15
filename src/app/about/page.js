@@ -115,7 +115,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-white">
+      <main className="py-20 min-h-screen bg-white">
         <section className="bg-white">
           <div className="max-w-7xl mx-auto">
             {/* Header */}

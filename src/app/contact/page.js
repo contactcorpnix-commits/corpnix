@@ -4,7 +4,7 @@ import FAQsSection from '@/components/sections/faqs';
 export default function Contact() {
   return (
     <>
-      <div>
+      <div className='py-20'>
         <ContactSection />
         <FAQsSection />
       </div>

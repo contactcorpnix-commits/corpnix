@@ -1,0 +1,9 @@
+NEXT_PUBLIC_SUPABASE_URL=https://hhloispuvptvfpimjkcb.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhobG9pc3B1dnB0dmZwaW1qa2NiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYyMTk2MTQsImV4cCI6MjA3MTc5NTYxNH0.rnLCXUnuVCa8_9GcO3XkRhewWxDclIwGLDYwVUtFuDw
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=contact.corpnix@gmail.com
+SMTP_PASS=ewkgkidqgxrtmjya
+MAIL_TO=contact.corpnix@gmail.com

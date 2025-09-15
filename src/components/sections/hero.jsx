@@ -20,7 +20,7 @@ const Hero = ({ section }) => {
 
   return (
     <motion.section 
-      className="relative overflow-hidden min-h-screen bg-gradient-to-b from-[#0A0822] to-[#221f4d] pb-10"
+      className="py-20 relative overflow-hidden min-h-screen bg-gradient-to-b from-[#0A0822] to-[#221f4d] pb-10"
       style={{
         backgroundImage: heroData.background_image_url 
           ? `url(${heroData.background_image_url})` 
